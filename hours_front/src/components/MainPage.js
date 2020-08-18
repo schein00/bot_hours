@@ -7,7 +7,7 @@ import Grid from './Grid';
 export default function MainPage() {
   return (
     <div className="principal">
-      <Grid form="0" />
+      <Grid grid="0" />
     </div>
   );
 }
