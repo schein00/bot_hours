@@ -6,20 +6,24 @@ var port = 30300;
 const fs = require('fs');
 const file = './data/dados.json';
 
+var cors = require('cors');
+
+app.use(cors());
+
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-app.get('/grid/:form', (req, res) => {
+app.get('/grid/:grid', (req, res) => {
   let grids = JSON.parse(fs.readFileSync(file, 'utf8'));
-  let forms = parseInt(req.params.form);
+  let grid = parseInt(req.params.grid);
 
-  let f = grids.forms.find((element) => element.id == forms);
+  let fields = grids.forms.find((element) => element.id == grid);
 
-  console.log(grids.forms);
-  console.log(f);
+  // console.log(grids.forms);
+  // console.log(f);
 
-  res.status(200).send(f.formulario);
+  res.status(200).send(fields.formulario);
 });
 
 app.listen(port, function () {
