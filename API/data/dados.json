@@ -5,8 +5,8 @@
       "formulario": [
         {
           "id": 0,
-          "Name": "texto",
-          "Caption": "Descição das tarefas",
+          "name": "texto",
+          "caption": "Descição das tarefas",
           "width": 100,
           "align": "left"
         }
