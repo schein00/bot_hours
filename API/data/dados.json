@@ -9,6 +9,20 @@
           "caption": "Descição das tarefas",
           "width": 100,
           "align": "left"
+        },
+        {
+          "id": 1,
+          "name": "hora",
+          "caption": "Horario de Inicio",
+          "width": 50,
+          "align": "right"
+        },
+        {
+          "id": 2,
+          "name": "hora",
+          "caption": "Horario Final",
+          "width": 50,
+          "align": "right"
         }
       ]
     }
