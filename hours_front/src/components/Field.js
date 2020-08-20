@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 
 export default class Field extends Component {
+  let;
+
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <input type="text" />
+      </div>
+    );
   }
 }

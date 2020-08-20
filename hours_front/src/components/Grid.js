@@ -9,13 +9,20 @@ export default class Grid extends Component {
     console.log(this.props.grid);
     getGridInfo(this.props.grid);
 
-    return (
-      <div>
-        {fields.map((element) => {
-          <Field data={element} />;
-        })}
-      </div>
-    );
+    const item = [];
+
+    for (let index = 0; index < fields.length; index++) {
+      item.push(
+        <Field
+          name={fields[index].name}
+          caption={fields[index].caption}
+          width={fields[index].width}
+          align={fields[index].align}
+        />
+      );
+    }
+
+    return <div>{item}</div>;
   }
 }
 
@@ -23,7 +30,7 @@ async function getGridInfo(grid) {
   const res = await fetch('http://localhost:30300/grid/0');
   const json = await res.json();
 
-  // console.log(json);
+  console.log(json);
 
   fields = json.map((data) => {
     return {
